@@ -14,7 +14,7 @@ export class Triangle implements Figure {
     public c: number,
   ) {
     if (a <= 0 || b <= 0 || c <= 0) {
-      throw new Error('Invalid triangle side value');
+      throw new Error('Rectangle sides must be positive numbers');
     }
 
     if (Math.max(a, b, c) >= a + b + c - Math.max(a, b, c)) {
@@ -43,7 +43,7 @@ export class Circle implements Figure {
     public radius: number,
   ) {
     if (radius <= 0) {
-      throw new Error('Invalid radius value');
+      throw new Error('Rectangle radius must be positive numbers');
     }
   }
 
@@ -57,16 +57,16 @@ export class Rectangle implements Figure {
 
   constructor(
     public color: 'red' | 'green' | 'blue',
-    public a: number,
-    public b: number,
+    public width: number,
+    public height: number,
   ) {
-    if (a <= 0 || b <= 0) {
-      throw new Error('Invalid rectangle side value');
+    if (width <= 0 || height <= 0) {
+      throw new Error('Rectangle sides must be positive numbers');
     }
   }
 
   getArea(): number {
-    return Math.floor(this.a * this.b * 100) / 100;
+    return Math.floor(this.width * this.height * 100) / 100;
   }
 }
 
