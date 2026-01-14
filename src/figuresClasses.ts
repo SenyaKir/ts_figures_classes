@@ -17,7 +17,7 @@ export class Triangle implements Figure {
     public c: number,
   ) {
     if (a <= 0 || b <= 0 || c <= 0) {
-      throw new Error('Rectangle sides must be positive numbers');
+      throw new Error('Triangle sides must be positive numbers');
     }
 
     if (Math.max(a, b, c) >= a + b + c - Math.max(a, b, c)) {
@@ -46,7 +46,7 @@ export class Circle implements Figure {
     public radius: number,
   ) {
     if (radius <= 0) {
-      throw new Error('Rectangle radius must be positive numbers');
+      throw new Error('Circle radius must be positive numbers');
     }
   }
 
